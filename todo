@@ -1,0 +1,70 @@
+cat <afk  | ls 
+tab + ls
+echo $1printedbut1shouldNot
+
+expending inside the herDoc and vise virsa if there is a quote in delemter exp:
+cat << ""d
+$ cat << $USER
+
+tab     +     ls
+
+bash-3.2$ cat << ""d
+> $USER
+> d
+$USER
+
+===> working 
+-------------------- 
+
+
+bash-3.2$ cat << d
+> $USER
+> d
+afaris
+
+===> not working
+double / single quotes error (leaks);
+dollar not found (leaks);
+$?: (leaks);
+ ls < > file : dosen't have to show the command with syntax error
+ $PATH : command not found iy must showing up b3daaaa 
+
+
+---------------------------------
+
+ bash-3.2$ << "$USER" cat
+> dsff
+> fsdfs
+> afaris
+> $USER
+dsff
+fsdfs
+afaris
+bash-3.2$
+
+
+DOUBLE QOUTE SHOULD NOT EXPAND IN THIS CASE
+
+
+---------------------------------
+
+minishell >$ ls < aljbkb | ls > re
+aljbkb: No such file or directory
+Makefile                lexer_3.c
+ab                      libft
+anas                    minishell.c
+execution               minishell.dSYM
+fsdfds                  parse.c
+get_token.c             re
+header.h                redirection_lexer.c
+herdoc.c                schoukou
+herdoc_2.c              todo
+init_parse.c            token.c
+leaks.sh                token.h
+lexer.c                 tools.c
+lexer_2.c
+minishell >$ 
+
+
+fd of 2nd ls is not opened 
+
